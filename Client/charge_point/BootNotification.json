@@ -1,0 +1,11 @@
+{
+    "chargePointVendor": "The Mobility House",
+    "chargePointModel": "Optimus",
+    "chargePointSerialNumber": "CP12345678",
+    "chargeBoxSerialNumber": "CB87654321",
+    "firmwareVersion": "v1.0.3",
+    "iccid": "8901123456789012345",
+    "imsi": "310260000000000",
+    "meterType": "Digital",
+    "meterSerialNumber": "SN12345678"
+  }

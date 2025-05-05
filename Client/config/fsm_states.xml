@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fsm>
+    <!-- States -->
+    <state name="Boşta" />
+    <state name="Araç Bağlandı" />
+    <state name="Sertifika Doğrulama" />
+    <state name="Kimlik Doğrulandı" />
+    <state name="Şarj Ediliyor" />
+    <state name="Şarj Tamamlandı" />
+    <state name="Ödeme Onayı" />
+    <state name="Ödeme Alındı" />
+    <state name="Error" />
+
+    <!-- Normal transitions -->
+    <transition from="Boşta" trigger="send_service_discovery" to="Boşta" />
+    <transition from="Boşta" trigger="connect_vehicle" to="Araç Bağlandı" />
+    <transition from="Araç Bağlandı" trigger="start_cert_check" to="Sertifika Doğrulama" />
+    <transition from="Sertifika Doğrulama" trigger="auth_ok" to="Kimlik Doğrulandı" />
+    <transition from="Kimlik Doğrulandı" trigger="start_charging" to="Şarj Ediliyor" />
+    <transition from="Şarj Ediliyor" trigger="charging_complete" to="Şarj Tamamlandı" />
+    <transition from="Şarj Tamamlandı" trigger="start_payment" to="Ödeme Onayı" />
+    <transition from="Ödeme Onayı" trigger="payment_complete" to="Ödeme Alındı" />
+    <transition from="Ödeme Alındı" trigger="disconnect" to="Boşta" />
+
+    <!-- Error transitions -->
+    <transition from="Boşta" trigger="error_occurred" to="Error" />
+    <transition from="Boşta" trigger="error_occurred" to="Error" />
+    <transition from="Araç Bağlandı" trigger="error_occurred" to="Error" />
+    <transition from="Sertifika Doğrulama" trigger="error_occurred" to="Error" />
+    <transition from="Kimlik Doğrulandı" trigger="error_occurred" to="Error" />
+    <transition from="Şarj Ediliyor" trigger="error_occurred" to="Error" />
+    <transition from="Şarj Tamamlandı" trigger="error_occurred" to="Error" />
+    <transition from="Ödeme Onayı" trigger="error_occurred" to="Error" />
+    <transition from="Ödeme Alındı" trigger="error_occurred" to="Error" />
+    <transition from="Error" trigger="reset_error" to="Boşta" />
+</fsm>

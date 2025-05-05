@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errors>
+    <error message="ReaderFailure">
+        <validStates>
+            <state>Sertifika Doğrulama</state>
+        </validStates>
+    </error>
+
+    <error message="OtherError">
+        <validStates>
+            <state>Ödeme Onayı</state>
+        </validStates>
+    </error>
+
+    <error message="EVCommunicationError">
+        <validStates>
+            <state>Boşta</state>
+            <state>Araç Bağlandı</state>
+            <state>Sertifika Doğrulama</state>
+            <state>Kimlik Doğrulandı</state>
+            <state>Ödeme Onayı</state>
+            <state>Şarj Ediliyor</state>
+            <state>Şarj Tamamlandı</state>
+            <state>Ödeme Alındı</state> <!-- Yeni durum eklendi -->
+            <state>Error</state>
+        </validStates>
+    </error>
+
+    <error message="ConnectorLockFailure">
+        <validStates>
+            <state>Araç Bağlandı</state>
+            <state>Şarj Ediliyor</state>
+        </validStates>
+    </error>
+</errors>

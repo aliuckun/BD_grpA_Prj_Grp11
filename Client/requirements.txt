@@ -1,0 +1,6 @@
+PyQt5~=5.15.11
+graphviz
+xmltodict
+
+psycopg2~=2.9.10
+websockets~=15.0.1
