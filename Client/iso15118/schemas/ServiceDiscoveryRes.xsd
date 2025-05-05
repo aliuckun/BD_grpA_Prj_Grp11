@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:iso:15118:2:2013:MsgDataTypes"
+           xmlns="urn:iso:15118:2:2013:MsgDataTypes"
+           elementFormDefault="qualified">
+
+    <!-- Kök eleman -->
+    <xs:element name="ServiceDiscoveryRes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SessionID" type="xs:string"/>
+                <xs:element name="ResponseCode" type="xs:string"/>
+                <xs:element name="MatchedServiceList">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Service" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ServiceID" type="xs:unsignedByte"/>
+                                        <xs:element name="ServiceName" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
