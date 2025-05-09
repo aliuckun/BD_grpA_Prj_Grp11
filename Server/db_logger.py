@@ -5,7 +5,7 @@ from datetime import datetime
 DB_CONFIG = {
     "dbname": "ocpp_db",
     "user": "postgres",
-    "password": "Sekeroptik.123",
+    "password": "",    # Your PostgreSQL Database Password
     "host": "localhost",
     "port": 5432
 }
