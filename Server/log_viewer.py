@@ -4,9 +4,9 @@ from PyQt5.QtWidgets import QWidget, QTableWidget, QTableWidgetItem, QVBoxLayout
 from PyQt5.QtCore import Qt
 
 DB_CONFIG = {
-    "dbname": "ocpp_db",
+    "dbname": "ocpp_db",   # Your PostgreSQL Database Name 
     "user": "postgres",
-    "password": "Sekeroptik.123",
+    "password": "",        # Your PostgreSQL Database Password
     "host": "localhost",
     "port": 5432
 }
