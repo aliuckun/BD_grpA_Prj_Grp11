@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         self.db = DatabaseManager(
             db_name="ev_charging_simulation",
             user="postgres",
-            password="Sekeroptik.123",
+            password="",    #Your PostgreSQL Database Password
             host="localhost",
             port="5432"
         )
